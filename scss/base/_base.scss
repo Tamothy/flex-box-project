@@ -8,8 +8,75 @@ body {
    font-family: futura;
  }
 
- img {
-   width: 100%;
-   margin: 0;
-   padding: 0;
- }
+img {
+ // width: 100%;
+ margin: 0;
+ padding: 0;
+ width: 80px;
+  height: 80px;
+  margin-top: 0;
+  margin-bottom: 200px;
+}
+
+.container-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-gallery-top, .container-gallery-bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.large {
+  width: 100vw;
+}
+
+.small {
+  width: 50vw;
+}
+
+.image {
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  &:hover {
+    transition: all .2s ease-in-out .2s;
+    filter: grayscale(0%);
+  }
+}
+
+.baby {
+  background-image: url("../img/baby.jpg");
+  background-position: bottom;
+}
+
+.girl {
+  background-image: url("../img/girl.jpg");
+}
+
+.eye {
+  background-image: url("../img/eye.jpg");
+}
+
+.prince {
+  background-image: url("../img/prince.jpg");
+  background-position: right;
+}
+
+.girl-2 {
+  background-image: url("../img/girl-2.jpg");
+  background-position: right;
+}
+
+.girl-3 {
+  background-image: url("../img/girl-3.jpg");
+  background-position: right;
+}

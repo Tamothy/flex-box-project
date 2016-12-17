@@ -79,7 +79,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: gray;
+  background: #BDDAFA;
   padding: 0 6em; }
   .container-nav-two ul {
     display: flex;
@@ -151,5 +151,27 @@ body {
       display: flex;
       align-items: flex-end;
       flex-basis: 50%; }
+
+@media (max-width: 768px) {
+  body {
+    text-align: center; }
+
+  .main-top {
+    display: flex;
+    flex-direction: column; }
+
+  .container-nav {
+    display: flex;
+    flex-direction: column; }
+
+  .container-nav-two {
+    display: none; }
+
+  .main-bottom {
+    display: flex; }
+    .main-bottom .row-one {
+      flex-direction: column; }
+    .main-bottom .row-two {
+      flex-direction: column; } }
 
 /*# sourceMappingURL=styles.css.map */

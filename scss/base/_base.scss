@@ -91,7 +91,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: gray;
+  background: $sail;
   padding: 0 6em;
 
   ul {
@@ -211,6 +211,37 @@ body {
       display: flex;
       align-items: flex-end;
       flex-basis: 50%;
+    }
+  }
+}
+
+@media #{$brk-responsive} {
+  body {
+    text-align: center;
+  }
+
+  .main-top {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .container-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-nav-two {
+    display: none;
+  }
+
+  .main-bottom {
+    display: flex;
+    .row-one {
+      flex-direction: column;
+    }
+    .row-two {
+      flex-direction: column;
     }
   }
 }

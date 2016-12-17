@@ -5,14 +5,14 @@
 body {
    font-family: futura;
    margin: 0;
-   color: white;
+   color: $white;
  }
 
 // Top section
 .main-top {
   display: flex;
   flex-direction: column;
-  background: url('../img/camera.jpg');
+  background: url('#{$path-img}/camera.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -33,7 +33,7 @@ body {
       li {
         padding-left: 2em;
         &:hover {
-          color: orange;
+          color: $orange;
           cursor: pointer;
         }
       }
@@ -48,28 +48,37 @@ body {
     .bar {
       height: .3em;
       width: 18em;
-      background-color: white;
+      background-color: $white;
       margin-top: 1em;
+    }
+
+    .color-word {
+      color: $burnt-sienna;
+      font-style: italic;
     }
 
     h1 {
       font-size: 8em;
       margin: 0;
+      color: $burnt-sienna;
+      font-style: italic;
     }
 
     button {
+      font-family: futura;
       margin-top: 12em;
+      margin-bottom: 2em;
       border-style: none;
-      background-color: orange;
-      color: white;
+      background-color: $orange;
+      color: $white;
       border-radius: 8px;
-      padding: 1.5em;
+      padding: 1em;
       font-size: 14px;
       transition: all 1s ease-in-out;
 
       &:hover {
         cursor: pointer;
-        background-color: red;
+        background-color: $burnt-sienna;
         transform: scale(1.1);
       }
     }
@@ -91,8 +100,18 @@ body {
     padding-left: 0;
     li {
       padding-right: 1em;
+      &:hover {
+        color: $orange;
+        cursor: pointer;
+      }
     }
   }
+
+  p:hover {
+  color: $orange;
+  cursor: pointer;
+  }
+
 }
 
 // Bottom section
@@ -109,7 +128,10 @@ body {
       &:hover {
         @extend %grayscale-to-color;
       }
-      background: url('../img/baby.jpg');
+      p {
+        @extend %paragraph-padding;
+      }
+      background: url('#{$path-img}/baby.jpg');
       @include background-image-properties(no-repeat, center, cover);
       display: flex;
       align-items: flex-end;
@@ -120,7 +142,10 @@ body {
       &:hover {
         @extend %grayscale-to-color;
       }
-      background: url('../img/girl.jpg');
+      p {
+        @extend %paragraph-padding;
+      }
+      background: url('#{$path-img}/girl.jpg');
       @include background-image-properties(no-repeat, center, cover);
       display: flex;
       align-items: flex-end;
@@ -131,7 +156,10 @@ body {
       &:hover {
         @extend %grayscale-to-color;
       }
-      background: url('../img/eye.jpg');
+      p {
+        @extend %paragraph-padding;
+      }
+      background: url('#{$path-img}/eye.jpg');
       @include background-image-properties(no-repeat, center, cover);
       display: flex;
       align-items: flex-end;
@@ -147,7 +175,10 @@ body {
       &:hover {
         @extend %grayscale-to-color;
       }
-      background: url('../img/prince.jpg');
+      p {
+        @extend %paragraph-padding;
+      }
+      background: url('#{$path-img}/prince.jpg');
       @include background-image-properties(no-repeat, center, cover);
       display: flex;
       align-items: flex-end;
@@ -158,7 +189,10 @@ body {
       &:hover {
         @extend %grayscale-to-color;
       }
-      background: url('../img/girl-two.jpg');
+      p {
+        @extend %paragraph-padding;
+      }
+      background: url('#{$path-img}/girl-two.jpg');
       @include background-image-properties(no-repeat, center, cover);
       display: flex;
       align-items: flex-end;
@@ -169,7 +203,10 @@ body {
       &:hover {
         @extend %grayscale-to-color;
       }
-      background: url('../img/girl-three.jpg');
+      p {
+        @extend %paragraph-padding;
+      }
+      background: url('#{$path-img}/girl-three.jpg');
       @include background-image-properties(no-repeat, center, cover);
       display: flex;
       align-items: flex-end;

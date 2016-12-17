@@ -11,4 +11,8 @@
 %grayscale-to-color {
     transition: all .1s ease-in-out .1s;
     filter: grayscale(0%);
-  }
+}
+
+%paragraph-padding {
+  padding-left: 2em;
+}

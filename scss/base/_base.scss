@@ -1,82 +1,179 @@
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @extend %border-box;
 }
 
 body {
    font-family: futura;
+   margin: 0;
+   color: white;
  }
 
-img {
- // width: 100%;
- margin: 0;
- padding: 0;
- width: 80px;
-  height: 80px;
-  margin-top: 0;
-  margin-bottom: 200px;
-}
-
-.container-gallery {
+// Top section
+.main-top {
   display: flex;
   flex-direction: column;
-}
-
-.container-gallery-top, .container-gallery-bottom {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.large {
-  width: 100vw;
-}
-
-.small {
-  width: 50vw;
-}
-
-.image {
-  height: 400px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
+  background: url('../img/camera.jpg');
+  background-repeat: no-repeat;
   background-position: center;
-  filter: grayscale(100%);
-  &:hover {
-    transition: all .2s ease-in-out .2s;
-    filter: grayscale(0%);
+  background-size: cover;
+  min-height: 100vh;
+  width: auto;
+  padding: 0 6em;
+
+  .container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12em;
+
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        padding-left: 2em;
+        &:hover {
+          color: orange;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+    .bar {
+      height: .3em;
+      width: 18em;
+      background-color: white;
+      margin-top: 1em;
+    }
+
+    h1 {
+      font-size: 8em;
+      margin: 0;
+    }
+
+    button {
+      margin-top: 12em;
+      border-style: none;
+      background-color: orange;
+      color: white;
+      border-radius: 8px;
+      padding: 1.5em;
+      font-size: 14px;
+      transition: all 1s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: red;
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
-.baby {
-  background-image: url("../img/baby.jpg");
-  background-position: bottom;
+
+.container-nav-two {
+  height: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: gray;
+  padding: 0 6em;
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    li {
+      padding-right: 1em;
+    }
+  }
 }
 
-.girl {
-  background-image: url("../img/girl.jpg");
-}
+// Bottom section
+.main-bottom {
+  display: flex;
+  flex-direction: column;
 
-.eye {
-  background-image: url("../img/eye.jpg");
-}
+  .row-one {
+    display: flex;
+    height: 50vh;
 
-.prince {
-  background-image: url("../img/prince.jpg");
-  background-position: right;
-}
+    .baby {
+      @extend %grayscale;
+      &:hover {
+        @extend %grayscale-to-color;
+      }
+      background: url('../img/baby.jpg');
+      @include background-image-properties(no-repeat, center, cover);
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 50%;
+    }
+    .girl {
+      @extend %grayscale;
+      &:hover {
+        @extend %grayscale-to-color;
+      }
+      background: url('../img/girl.jpg');
+      @include background-image-properties(no-repeat, center, cover);
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 25%;
+    }
+    .eye {
+      @extend %grayscale;
+      &:hover {
+        @extend %grayscale-to-color;
+      }
+      background: url('../img/eye.jpg');
+      @include background-image-properties(no-repeat, center, cover);
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 25%;
+    }
+  }
 
-.girl-two {
-  background-image: url("../img/girl-2.jpg");
-  background-position: right;
-}
-
-.girl-three {
-  background-image: url("../img/girl-3.jpg");
-  background-position: right;
+  .row-two {
+    display: flex;
+    height: 50vh;
+    .prince {
+      @extend %grayscale;
+      &:hover {
+        @extend %grayscale-to-color;
+      }
+      background: url('../img/prince.jpg');
+      @include background-image-properties(no-repeat, center, cover);
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 25%;
+    }
+    .girl-two {
+      @extend %grayscale;
+      &:hover {
+        @extend %grayscale-to-color;
+      }
+      background: url('../img/girl-two.jpg');
+      @include background-image-properties(no-repeat, center, cover);
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 25%;
+    }
+    .girl-three {
+      @extend %grayscale;
+      &:hover {
+        @extend %grayscale-to-color;
+      }
+      background: url('../img/girl-three.jpg');
+      @include background-image-properties(no-repeat, center, cover);
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 50%;
+    }
+  }
 }

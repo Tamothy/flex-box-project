@@ -3,66 +3,137 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.main-bottom .row-one .baby, .main-bottom .row-one .girl, .main-bottom .row-one .eye, .main-bottom .row-two .prince, .main-bottom .row-two .girl-two, .main-bottom .row-two .girl-three {
+  filter: grayscale(100%); }
+
+.main-bottom .row-one .baby:hover, .main-bottom .row-one .girl:hover, .main-bottom .row-one .eye:hover, .main-bottom .row-two .prince:hover, .main-bottom .row-two .girl-two:hover, .main-bottom .row-two .girl-three:hover {
+  transition: all .1s ease-in-out .1s;
+  filter: grayscale(0%); }
+
 body {
-  font-family: futura; }
-
-img {
+  font-family: futura;
   margin: 0;
-  padding: 0;
-  width: 80px;
-  height: 80px;
-  margin-top: 0;
-  margin-bottom: 200px; }
+  color: white; }
 
-.container-gallery {
+.main-top {
+  display: flex;
+  flex-direction: column;
+  background: url("../img/camera.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  width: auto;
+  padding: 0 6em; }
+  .main-top .container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12em; }
+    .main-top .container-nav ul {
+      display: flex;
+      list-style: none; }
+      .main-top .container-nav ul li {
+        padding-left: 2em; }
+        .main-top .container-nav ul li:hover {
+          color: orange;
+          cursor: pointer; }
+  .main-top .quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .main-top .quote .bar {
+      height: .3em;
+      width: 18em;
+      background-color: white;
+      margin-top: 1em; }
+    .main-top .quote h1 {
+      font-size: 8em;
+      margin: 0; }
+    .main-top .quote button {
+      margin-top: 12em;
+      border-style: none;
+      background-color: orange;
+      color: white;
+      border-radius: 8px;
+      padding: 1.5em;
+      font-size: 14px;
+      transition: all 1s ease-in-out; }
+      .main-top .quote button:hover {
+        cursor: pointer;
+        background-color: red;
+        transform: scale(1.1); }
+
+.container-nav-two {
+  height: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: gray;
+  padding: 0 6em; }
+  .container-nav-two ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0; }
+    .container-nav-two ul li {
+      padding-right: 1em; }
+
+.main-bottom {
   display: flex;
   flex-direction: column; }
-
-.container-gallery-top, .container-gallery-bottom {
-  display: flex;
-  flex-wrap: wrap; }
-
-.large {
-  width: 100vw; }
-
-.small {
-  width: 50vw; }
-
-.image {
-  height: 400px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(100%); }
-  .image:hover {
-    transition: all .2s ease-in-out .2s;
-    filter: grayscale(0%); }
-
-.baby {
-  background-image: url("../img/baby.jpg");
-  background-position: bottom; }
-
-.girl {
-  background-image: url("../img/girl.jpg"); }
-
-.eye {
-  background-image: url("../img/eye.jpg"); }
-
-.prince {
-  background-image: url("../img/prince.jpg");
-  background-position: right; }
-
-.girl-two {
-  background-image: url("../img/girl-2.jpg");
-  background-position: right; }
-
-.girl-three {
-  background-image: url("../img/girl-3.jpg");
-  background-position: right; }
+  .main-bottom .row-one {
+    display: flex;
+    height: 50vh; }
+    .main-bottom .row-one .baby {
+      background: url("../img/baby.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 50%; }
+    .main-bottom .row-one .girl {
+      background: url("../img/girl.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 25%; }
+    .main-bottom .row-one .eye {
+      background: url("../img/eye.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 25%; }
+  .main-bottom .row-two {
+    display: flex;
+    height: 50vh; }
+    .main-bottom .row-two .prince {
+      background: url("../img/prince.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 25%; }
+    .main-bottom .row-two .girl-two {
+      background: url("../img/girl-two.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 25%; }
+    .main-bottom .row-two .girl-three {
+      background: url("../img/girl-three.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 50%; }
 
 /*# sourceMappingURL=styles.css.map */

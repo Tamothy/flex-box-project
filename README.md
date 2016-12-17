@@ -14,7 +14,7 @@ This contains a photography website. The purpose of the project was to practice 
 * Clone repository if interested in making changes
 * Make sure to have Sass installed, if not, run `gem install sass` in terminal
 * If there is an error message when installing Sass, run `sudo gem install sass` in terminal
-* Once in project terminal path, run `sass --watch scss:css` in terminal;
+* Once in project terminal path, run `sass --watch scss:css` in terminal
 * Use Atom to customize changes
 * Make sure to commit regularly on terminal
 * Don't forget to push to remote repository
